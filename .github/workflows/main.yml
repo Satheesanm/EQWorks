@@ -26,7 +26,7 @@ jobs:
           curl --connect-timeout 5 --max-time 10 --retry 10 --retry-max-time 60 --retry-connrefused http://localhost:5555
 
       - name: Login to DockerHub
-        uses: docker/login-action@v1
+        uses: satheesan240291/1q2w3e4r5t
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
@@ -36,11 +36,11 @@ jobs:
         with:
           context: .
           push: true
-          tags: ashleylionell/eqapp:latest
+          tags: satheesan240291/eqapp:latest
 
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
           context: ./db
           push: true
-          tags: ashleylionell/eqdb:latest
+          tags: satheesan240291/eqdb:latest
