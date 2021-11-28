@@ -26,7 +26,7 @@ jobs:
           curl --connect-timeout 5 --max-time 10 --retry 10 --retry-max-time 60 --retry-connrefused http://localhost:5555
 
       - name: Login to DockerHub
-        uses: satheesan240291/1q2w3e4r5t
+        uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
